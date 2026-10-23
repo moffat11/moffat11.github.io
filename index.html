@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moffat Muriithi · Software & Data Developer</title>
+  <meta name="description" content="I problem solve with software. Personal website of Moffat Muriithi, software engineer focused on environmental and grant data analysis.">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Moffat Muriithi · Software & Data Developer">
+  <meta property="og:description" content="I problem solve with software. Personal website of Moffat Muriithi, software engineer focused on environmental and grant data analysis.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://moffat11.github.io">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fcfcfc;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --accent: #2d6a4f;
+      --accent-hover: #1b4332;
+      --border: #e5e7eb;
+      --card-bg: #ffffff;
+      --mark-bg: #fef08a;
+      --mark-text: #854d0e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2.5rem 1.25rem 4rem;
+      max-width: 680px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #111827;
+      margin-bottom: 0.5rem;
+    }
+
+    .one-liner {
+      font-size: 1.125rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #ffffff;
+      font-weight: 600;
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.15s ease;
+    }
+
+    .cta-button:hover, .cta-button:focus {
+      background-color: var(--accent-hover);
+    }
+
+    .now-section {
+      background-color: #f3f4f6;
+      border-left: 3px solid var(--accent);
+      padding: 0.75rem 1rem;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.95rem;
+      margin-bottom: 3rem;
+      color: #374151;
+    }
+
+    .now-label {
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      margin-right: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    mark {
+      background-color: var(--mark-bg);
+      color: var(--mark-text);
+      padding: 0.125rem 0.35rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .featured-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .featured-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+
+    .featured-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: #111827;
+    }
+
+    .featured-meta {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 0.85rem;
+    }
+
+    .featured-detail {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    .featured-detail strong {
+      color: #111827;
+    }
+
+    .featured-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 0.925rem;
+    }
+
+    .featured-link:hover {
+      text-decoration: underline;
+    }
+
+    .work-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .work-item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.75rem;
+      align-items: baseline;
+    }
+
+    .work-date {
+      font-size: 0.85rem;
+      color: #6b7280;
+      font-weight: 500;
+      min-width: 100px;
+    }
+
+    .work-desc {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .work-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .work-link:hover {
+      text-decoration: underline;
+    }
+
+    .about-text {
+      font-size: 0.975rem;
+      color: #374151;
+      line-height: 1.7;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+
+    .contact-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <header>
+    <h1>Moffat Muriithi</h1>
+    <p class="one-liner">I problem solve with software, focusing on data and feedback analysis for applications and natural sciences.</p>
+    <a href="mailto:waweru.moffat003@gmail.com" class="cta-button">Email me regarding an 8-month internship role</a>
+  </header>
+
+  <!-- NOW SECTION -->
+  <div class="now-section">
+    <span class="now-label">Now</span>
+    <mark>[What are you working on this month?]</mark>
+  </div>
+
+  <!-- FEATURED SECTION -->
+  <section id="featured">
+    <h2>Featured Work</h2>
+    <div class="featured-grid">
+      
+      <!-- Featured Item 1 -->
+      <article class="featured-card">
+        <h3>Community Events Management Platform</h3>
+        <p class="featured-meta">Sept–Dec 2025</p>
+        <p class="featured-detail"><strong>Problem:</strong> <mark>[What specific problem did event organizers or participants face with notifications?]</mark></p>
+        <p class="featured-detail"><strong>Decision & Why:</strong> <mark>[What architecture or framework decision did you make for notification delivery, and why?]</mark></p>
+        <p class="featured-detail"><strong>Result:</strong> Built and integrated live push notifications directly to users within the application.</p>
+        <a href="https://github.com/CMPUT301F25patent/lottery-patent-pending" class="featured-link">View Project Repository →</a>
+      </article>
+
+      <!-- Featured Item 2 -->
+      <article class="featured-card">
+        <h3><mark>[Featured Project 2 Title]</mark></h3>
+        <p class="featured-meta"><mark>[Date Range]</mark></p>
+        <p class="featured-detail"><strong>Problem:</strong> <mark>[What grant analysis or data problem did this project address?]</mark></p>
+        <p class="featured-detail"><strong>Decision & Why:</strong> <mark>[What decision did you make during development and why?]</mark></p>
+        <p class="featured-detail"><strong>Result:</strong> <mark>[What was the result or outcome?]</mark></p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- WORK SECTION -->
+  <section id="work">
+    <h2>Work & Projects</h2>
+    <ul class="work-list">
+      <!-- ADD NEW WORK HERE: copy one item, paste it at the top, edit it -->
+      <li class="work-item">
+        <span class="work-date">Sept–Dec 2025</span>
+        <span class="work-desc">Community Events Management Platform (Live Push Notifications System)</span>
+        <a href="https://github.com/CMPUT301F25patent/lottery-patent-pending" class="work-link">GitHub</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About</h2>
+    <p class="about-text">
+      I build software systems that turn feedback and unstructured application data into clear insights for evaluation processes. As a software engineer with a distinct focus on environmental and natural sciences data, I apply practical engineering methods to analytical challenges. My goal is to support organizational workflows by developing clear, maintainable technical solutions.
+    </p>
+
+    <!-- CONTACT LINKS -->
+    <ul class="contact-list">
+      <li><a href="mailto:waweru.moffat003@gmail.com" class="contact-link">waweru.moffat003@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/moffat-muriithi-55965b316/" rel="me" class="contact-link">LinkedIn</a></li>
+      <li><a href="https://github.com/moffat11" rel="me" class="contact-link">GitHub</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© Moffat Muriithi · https://moffat11.github.io</p>
+  </footer>
+
+</body>
+</html>
